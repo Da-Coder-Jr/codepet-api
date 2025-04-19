@@ -1,4 +1,6 @@
-                    # MY CODEPET (TEST - MORE COMING SOON!)
+<p align="center">
+MY CODEPET (TEST - MORE COMING SOON!)
+</p>
 
 <p align="center">
   <img
