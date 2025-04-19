@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+
+  <!-- Light background gradient & subtle grid -->
   <defs>
     <linearGradient id="bg-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f0f4f8"/>
@@ -12,10 +14,70 @@
   </defs>
 
   <rect width="400" height="300" rx="15" fill="url(#bg-gradient-light)"/>
+  <g stroke="#00000011" stroke-width="1">
+    <line x1="0" y1="50"  x2="400" y2="50"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="50" y1="0"   x2="50"  y2="300"/>
+    <line x1="100" y1="0"  x2="100" y2="300"/>
+    <line x1="150" y1="0"  x2="150" y2="300"/>
+    <line x1="200" y1="0"  x2="200" y2="300"/>
+    <line x1="250" y1="0"  x2="250" y2="300"/>
+    <line x1="300" y1="0"  x2="300" y2="300"/>
+    <line x1="350" y1="0"  x2="350" y2="300"/>
+  </g>
 
-  <!-- Cat body & face omitted for brevity -->
+  <!-- Cat body & features -->
+  <g transform="translate(200,160)">
+    <!-- Glow + body -->
+    <ellipse cx="0" cy="0" rx="70" ry="58" fill="#fff3cd" filter="url(#glow-light)"/>
+    <ellipse cx="0" cy="0" rx="68" ry="56" fill="#ffe082"/>
 
-  <!-- Growth meter -->
+    <!-- Ears -->
+    <path d="M-45,-52 L-60,-88 L-30,-75 Z" fill="#ffe082"/>
+    <path d="M45,-52  L60,-88  L30,-75  Z" fill="#ffe082"/>
+    <!-- Inner ears -->
+    <path d="M-45,-52 L-55,-80 L-35,-68 Z" fill="#ffd54f"/>
+    <path d="M45,-52  L55,-80  L35,-68  Z" fill="#ffd54f"/>
+
+    <!-- Eyes -->
+    <g transform="translate(0,-12)">
+      <g transform="translate(-20,0)">
+        <circle cx="0" cy="0" r="10" fill="#fff"/>
+        <circle cx="0" cy="0" r="5"  fill="#000"/>
+        <circle cx="0" cy="-1" r="2" fill="#fff"/>
+      </g>
+      <g transform="translate(20,0)">
+        <circle cx="0" cy="0" r="10" fill="#fff"/>
+        <circle cx="0" cy="0" r="5"  fill="#000"/>
+        <circle cx="0" cy="-1" r="2" fill="#fff"/>
+      </g>
+    </g>
+
+    <!-- Nose & smile -->
+    <circle cx="0" cy="8" r="3" fill="#f48fb1"/>
+    <path d="M-8,12 Q0,22 8,12" stroke="#000" stroke-width="2" fill="none"/>
+
+    <!-- Whiskers -->
+    <path d="M-30,8 H-12" stroke="#000" stroke-width="1"/>
+    <path d="M-30,12 H-12" stroke="#000" stroke-width="1"/>
+    <path d="M12,8  H30" stroke="#000" stroke-width="1"/>
+    <path d="M12,12 H30" stroke="#000" stroke-width="1"/>
+
+    <!-- Code aura -->
+    <g font-family="monospace" font-size="10" fill="#757575" opacity="0.7">
+      <text x="-65" y="-40">{code}</text>
+      <text x="40"  y="-50">while()</text>
+      <text x="-80" y="0">if()</text>
+      <text x="40"  y="10">for(i)</text>
+      <text x="-60" y="40">const</text>
+      <text x="30"  y="40">;</text>
+    </g>
+  </g>
+
+  <!-- Growth bar (300px wide) -->
   <g transform="translate(50,250)">
     <rect width="300" height="15" rx="7.5" fill="#cfd8dc"/>
     <rect width="{{growthWidth}}" height="15" rx="7.5" fill="#81c784"/>
@@ -26,9 +88,11 @@
     </rect>
   </g>
 
+  <!-- Stats text -->
   <g text-anchor="middle" font-family="Arial, sans-serif" fill="#333">
     <text x="200" y="280" font-size="12">
       Level {{level}} CodePet • {{growth}} Growth • {{username}}
     </text>
   </g>
+
 </svg>
