@@ -1,6 +1,4 @@
-<p align="center">
-# MY CODEPET (TEST - MORE COMING SOON!)
-</p>
+<h1 align="center">MY CODEPET (TEST – MORE COMING SOON!)</h1>
 
 <p align="center">
   <img
