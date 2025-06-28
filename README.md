@@ -1,4 +1,4 @@
-<h1 align="center">MY CODEPET (TEST – MORE COMING SOON!)</h1>
+<h1 align="center">Codepet Demo</h1>
 
 <p align="center">
   <img
